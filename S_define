@@ -1,0 +1,35 @@
+/************************TRICK HEADER*************************
+PURPOSE:
+    (S_define file for SIM_pendulum_numeric)
+LIBRARY DEPENDENCIES:
+    (
+      (pendulum/src/pendulum_init.c)
+      (pendulum/src/pendulum_numeric.c)
+      (pendulum/src/pendulum_shutdown.c)
+    )
+*************************************************************/
+
+#include "sim_objects/default_trick_sys.sm"
+##include "pendulum/include/pendulum_numeric.h"
+
+class PendulumSimObject : public Trick::SimObject {
+
+    public:
+        PENDULUM pendulum;
+
+        PendulumSimObject() {
+            ("default_data") pendulum_default_data( &pendulum ) ;
+            ("initialization") pendulum_init( &pendulum ) ;
+            ("derivative") pendulum_deriv( &pendulum ) ;
+            ("integration") trick_ret= pendulum_integ( &pendulum ) ;
+            ("shutdown") pendulum_shutdown( &pendulum ) ;
+            ("dynamic_event") pendulum_direction_change( &pendulum) ;
+        }
+} ;
+
+PendulumSimObject dyn ;
+
+IntegLoop dyn_integloop (0.01) dyn ;
+void create_connections() {
+    dyn_integloop.getIntegrator(Runge_Kutta_4, 4);
+}
