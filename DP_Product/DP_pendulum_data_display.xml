@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE product PUBLIC "-//Tricklab//DTD Product V1.0//EN" "Product.dtd">
+<product version="1.0">
+    <tstart>-1.0E20</tstart>
+    <tstop>1.0E20</tstop>
+    <frequency>0.0</frequency>
+    <page hcells="0" vcells="0">
+        <title>Position Data vs Time</title>
+        <plot grid="Yes" grid_color="#b2b2b2">
+            <title>x-position vs time</title>
+            <xaxis>
+                <label>Time (s)</label>
+            </xaxis>
+            <yaxis>
+                <label>X-Position (m)</label>
+            </yaxis>
+            <curve>
+                <var label="Time" units="s">sys.exec.out.time</var>
+                <var label="x-position" units="m">dyn.pendulum.pos[0]</var>
+            </curve>
+        </plot>
+        <plot grid="Yes" grid_color="#b2b2b2">
+            <title>y-position vs time</title>
+            <xaxis>
+                <label>Time (s)</label>
+            </xaxis>
+            <yaxis>
+                <label>Y-Position (m)</label>
+            </yaxis>
+            <curve>
+                <var label="Time" units="s">sys.exec.out.time</var>
+                <var label="y-position" units="m">dyn.pendulum.pos[1]</var>
+            </curve>
+        </plot>
+    </page>
+    <page hcells="0" vcells="0">
+        <title>Angle data vs time</title>
+        <plot grid="Yes" grid_color="#b2b2b2">
+            <title>angle vs time</title>
+            <xaxis>
+                <label>Time (s)</label>
+            </xaxis>
+            <yaxis>
+                <label>Angle (rad)</label>
+            </yaxis>
+            <curve>
+                <var label="Time" units="s">sys.exec.out.time</var>
+                <var label="Angle" units="rad">dyn.pendulum.theta</var>
+            </curve>
+        </plot>
+        <plot grid="Yes" grid_color="#b2b2b2">
+            <title>angular velocity vs time</title>
+            <xaxis>
+                <label>Time (s)</label>
+            </xaxis>
+            <yaxis>
+                <label>Angular Velocity (rad/s)</label>
+            </yaxis>
+            <curve>
+                <var label="Time" units="s">sys.exec.out.time</var>
+                <var label="Angular Velocity" units="rad/s">dyn.pendulum.omega</var>
+            </curve>
+        </plot>
+    </page>
+    <page hcells="0" vcells="0">
+        <title>Pendulum Path</title>
+        <plot grid="Yes" grid_color="#b2b2b2">
+            <title>pendulum path</title>
+            <xaxis>
+                <label>X-Position (m)</label>
+            </xaxis>
+            <yaxis>
+                <label>Y-Position (m)</label>
+            </yaxis>
+            <curve>
+                <var label="x-position" units="m">dyn.pendulum.pos[0]</var>
+                <var label="y-position" units="m">dyn.pendulum.pos[1]</var>
+            </curve>
+        </plot>
+    </page>
+</product>

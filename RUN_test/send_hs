@@ -1,0 +1,25 @@
+|L   1|2023/11/16,22:22:32|ubuntu| |T 0|0.000000| Freeze ON. Simulation time holding at 0.000000 seconds.
+|L   1|2023/11/16,22:22:41|ubuntu| |T 0|0.000000| Freeze OFF.
+|L   1|2023/11/16,22:22:42|ubuntu| |T 0|0.900000| Freeze ON. Simulation time holding at 0.900000 seconds.
+|L   1|2023/11/16,22:22:43|ubuntu| |T 0|0.900000| Freeze OFF.
+|L   0|2023/11/16,22:22:49|ubuntu| |T 0|7.500000| 
+     REALTIME SHUTDOWN STATS:
+     REALTIME TOTAL OVERRUNS:            2
+            ACTUAL INIT TIME:        0.260
+         ACTUAL ELAPSED TIME:       17.786
+|L   0|2023/11/16,22:22:51|ubuntu| |T 0|7.500000| 
+SIMULATION TERMINATED IN
+  PROCESS: 0
+  ROUTINE: Executive_loop_single_thread.cpp:98
+  DIAGNOSTIC: Reached termination time
+
+           SIMULATION START TIME:        0.000
+            SIMULATION STOP TIME:        7.500
+         SIMULATION ELAPSED TIME:        7.500
+              USER CPU TIME USED:        0.317
+            SYSTEM CPU TIME USED:        0.129
+           SIMULATION / CPU TIME:       16.837
+    INITIALIZATION USER CPU TIME:        0.216
+  INITIALIZATION SYSTEM CPU TIME:        0.033
+            SIMULATION RAM USAGE:       55.957MB
+      (External program RAM usage not included!)

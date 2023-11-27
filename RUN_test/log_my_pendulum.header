@@ -1,0 +1,6 @@
+log_my_pendulum byte_order is little_endian
+log_my_pendulum	double	     s	sys.exec.out.time
+log_my_pendulum	double	   rad	dyn.pendulum.theta
+log_my_pendulum	double	 rad/s	dyn.pendulum.omega
+log_my_pendulum	double	     m	dyn.pendulum.pos[0]
+log_my_pendulum	double	     m	dyn.pendulum.pos[1]
